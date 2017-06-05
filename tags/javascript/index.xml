@@ -16,7 +16,15 @@
       <pubDate>Sun, 04 Jun 2017 18:41:44 -0700</pubDate>
       
       <guid>https://hchenfred.github.io/post/functional-programming/</guid>
-      <description></description>
+      <description>&lt;p&gt;What is functional programming?&lt;/p&gt;
+
+&lt;p&gt;We have to remember one keyword – higher-order functions? what are higher-order functions?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;arr.filter(function(element) return element &amp;gt; 3;)
+arr.map(function(element) return element * 2;)
+arr.find(function(element) return element = 10;)
+&lt;/code&gt;&lt;/pre&gt;
+</description>
     </item>
     
     <item>
