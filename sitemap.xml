@@ -95,44 +95,8 @@
     
     <url>
     
-      <loc>https://hchenfred.github.io/post/widgets/</loc>
-      <lastmod>2016-04-20T11:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://hchenfred.github.io/post/managing-content/</loc>
-      <lastmod>2016-04-20T11:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://hchenfred.github.io/post/writing-markdown-latex/</loc>
-      <lastmod>2016-04-20T10:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <loc>https://hchenfred.github.io/publication/person-re-identification/</loc>
       <lastmod>2015-09-01T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://hchenfred.github.io/post/migrate-from-jekyll/</loc>
-      <lastmod>2014-03-10T00:00:00+00:00</lastmod>
     </url>
     
   
@@ -208,28 +172,8 @@
     
     <url>
     
-      <loc>https://hchenfred.github.io/tags/hugo/</loc>
-      <lastmod>2016-04-20T11:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <loc>https://hchenfred.github.io/tags/javascript/</loc>
       <lastmod>2017-06-04T18:41:44-07:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://hchenfred.github.io/tags/jekyll/</loc>
-      <lastmod>2014-03-10T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
