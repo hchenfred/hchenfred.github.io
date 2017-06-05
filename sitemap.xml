@@ -5,6 +5,15 @@
     
     <url>
     
+      <loc>https://hchenfred.github.io/post/functional-programming/</loc>
+      <lastmod>2017-06-04T18:41:44-07:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>https://hchenfred.github.io/post/getting-started/</loc>
       <lastmod>2017-06-03T12:00:00+00:00</lastmod>
     </url>
@@ -210,7 +219,7 @@
     <url>
     
       <loc>https://hchenfred.github.io/tags/javascript/</loc>
-      <lastmod>2017-06-03T12:00:00+00:00</lastmod>
+      <lastmod>2017-06-04T18:41:44-07:00</lastmod>
       <priority>0</priority>
     </url>
     

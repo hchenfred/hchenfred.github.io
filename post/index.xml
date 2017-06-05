@@ -11,6 +11,15 @@
     <atom:link href="/post/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>functional programming</title>
+      <link>https://hchenfred.github.io/post/functional-programming/</link>
+      <pubDate>Sun, 04 Jun 2017 18:41:44 -0700</pubDate>
+      
+      <guid>https://hchenfred.github.io/post/functional-programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Javascript Interview Questions</title>
       <link>https://hchenfred.github.io/post/getting-started/</link>
       <pubDate>Sat, 03 Jun 2017 12:00:00 +0000</pubDate>
