@@ -11,7 +11,28 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>functional programming</title>
+      <title>What is execution Context in Javascript?</title>
+      <link>https://hchenfred.github.io/post/executioncontext/</link>
+      <pubDate>Mon, 05 Jun 2017 09:36:53 -0700</pubDate>
+      
+      <guid>https://hchenfred.github.io/post/executioncontext/</guid>
+      <description>&lt;p&gt;Execution context is a very important concept in Javascript. At one point, I thought I fully understand it. However, if you ask me to describe it in detail, I can&amp;rsquo;t. I just can&amp;rsquo;t. What does it mean? It means I don&amp;rsquo;t understand it.&lt;/p&gt;
+
+&lt;p&gt;The article is for me to try to explain it so that it deepens my understanding.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Global Execution Context
+Global Execution Context creates a global object (window object).
+The &amp;lsquo;this&amp;rsquo; keyword in global execution context refers to the global object.
+Global execution context is not inside a function&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Hoisting&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Functional Programming</title>
       <link>https://hchenfred.github.io/post/functional-programming/</link>
       <pubDate>Sun, 04 Jun 2017 18:41:44 -0700</pubDate>
       
@@ -26,7 +47,7 @@ arr.find(function(element) return element = 10;)
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Functions are pure functions. no side-effects.
-For the same input, you always get the same output. For example, if a function’s output is calculated with Date(), then it is not a pure function.&lt;/p&gt;
+For the same input, you always get the same output. For example, if a function’s output is calculated with Date(), then it is not a pure function. This is because every time you the the function, you will get a different output depending on the current Date and time.&lt;/p&gt;
 </description>
     </item>
     
