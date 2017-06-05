@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Demo on Huan Chen</title>
+    <link>https://hchenfred.github.io/tags/demo/</link>
+    <description>Recent content in Demo on Huan Chen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016 Your Name</copyright>
+    <lastBuildDate>Sat, 03 Jun 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/demo/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Friend.ly</title>
+      <link>https://hchenfred.github.io/project/friendly/</link>
+      <pubDate>Sat, 03 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://hchenfred.github.io/project/friendly/</guid>
+      <description>
+
+&lt;p&gt;Friend.ly is an iOS app which allows user to create events and invite friends to events. Friends could propose new activities for an event and vote on activities.&lt;/p&gt;
+
+&lt;h2 id=&#34;tech-stack&#34;&gt;Tech Stack&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;React Native&lt;/li&gt;
+&lt;li&gt;Redux&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://reactnavigation.org/&#34; target=&#34;_blank&#34;&gt;React Navigation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Facebook iOS SDK&lt;/li&gt;
+&lt;li&gt;Webpack&lt;/li&gt;
+&lt;li&gt;Express&lt;/li&gt;
+&lt;li&gt;MySQL&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;ui&#34;&gt;UI&lt;/h2&gt;
+
+&lt;p&gt;
+&lt;figure &gt;
+    
+        &lt;img src=&#34;https://hchenfred.github.io/img/friendly1.jpeg&#34; /&gt;
+    
+    
+    &lt;figcaption&gt;
+        &lt;h4&gt;User Interface 1&lt;/h4&gt;
+        
+    &lt;/figcaption&gt;
+    
+&lt;/figure&gt;
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;https://hchenfred.github.io/img/friendly2.jpeg&#34; /&gt;
+    
+    
+    &lt;figcaption&gt;
+        &lt;h4&gt;User Interface 2&lt;/h4&gt;
+        
+    &lt;/figcaption&gt;
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;h2 id=&#34;technical-contribution&#34;&gt;Technical Contribution&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Constructed front-end with React Native to render forms for user input and to display data from states&lt;/li&gt;
+&lt;li&gt;Implemented Redux  with actions and reducers for centralized state management&lt;/li&gt;
+&lt;li&gt;Built infrastructure for user authentication with Facebook iOS SDK to retrieve and store user profile data&lt;/li&gt;
+&lt;li&gt;Designed React Navigation for ease of use when switching views between React components&lt;/li&gt;
+&lt;li&gt;Built request handlers at back-end with Express.js to populate relational tables in MySQL with Promises&lt;/li&gt;
+&lt;li&gt;Constructed tests with Jest for React Native components and Redux actions/reducers at front-end and with Mocha/Chai for request handlers and integration between Express.js and database at back-end&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
