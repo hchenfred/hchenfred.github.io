@@ -129,6 +129,67 @@
   
   <div>
     
+    <h2><a href="https://hchenfred.github.io/post/javascriptdom/">Javascript DOM Selector and Manipulation</a></h2>
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    <time datetime="2017-06-05 12:05:28 -0700 PDT" itemprop="datePublished">
+      Mon, Jun 5, 2017
+    </time>
+  </span>
+
+  
+
+  
+  
+  
+  
+
+  
+
+</div>
+
+    <div class="article-style"><p>
+      
+      
+
+<h2 id="dom-selector-method">DOM Selector Method</h2>
+
+<ul>
+<li>document.getElementById()
+returns one element with the id</li>
+<li>document.getElementsByClassName()
+returns a node list (not an array)</li>
+<li>document.getElementsByTagName()
+returns a node list (not an array)</li>
+<li>document.querySelector()
+returns the first match</li>
+</ul>
+
+<h2 id="dom-manipulation">DOM Manipulation</h2>
+
+<ul>
+<li>change style
+<code>javascript
+el.style.color = 'blue';
+el.style.marginTop = '200px';
+</code></li>
+<li>change CSS Class to an element
+<code>javascript
+el.classList.add('CSSclassname');
+el.classList.remove('CSSclassname');
+el.classList.toggle('CSSclassname');
+</code></li>
+</ul>
+
+      
+    </p></div>
+  </div>
+  
+  <div>
+    
     <h2><a href="https://hchenfred.github.io/post/executioncontext/">What is execution Context in Javascript?</a></h2>
     
 
@@ -153,9 +214,18 @@
 
     <div class="article-style"><p>
       
-      Execution context is a very important concept in Javascript. At one point, I thought I fully understand it. However, if you ask me to describe it in detail, I can&rsquo;t. I just can&rsquo;t. What does it mean? It means I don&rsquo;t understand it.
-The article is for me to try to explain it so that it deepens my understanding.
- Global Execution Context Global Execution Context creates a global object (window object).
+      <p>Execution context is a very important concept in Javascript.
+The article is for me to try to explain it so that it deepens my understanding.</p>
+
+<ul>
+<li><p>Global Execution Context
+Global Execution Context creates a global object (window object).
+The &lsquo;this&rsquo; keyword in global execution context refers to the global object.
+Global execution context is not inside a function</p></li>
+
+<li><p>Hoisting</p></li>
+</ul>
+
       
     </p></div>
   </div>

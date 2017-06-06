@@ -11,14 +11,52 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Javascript DOM Selector and Manipulation</title>
+      <link>https://hchenfred.github.io/post/javascriptdom/</link>
+      <pubDate>Mon, 05 Jun 2017 12:05:28 -0700</pubDate>
+      
+      <guid>https://hchenfred.github.io/post/javascriptdom/</guid>
+      <description>
+
+&lt;h2 id=&#34;dom-selector-method&#34;&gt;DOM Selector Method&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;document.getElementById()
+returns one element with the id&lt;/li&gt;
+&lt;li&gt;document.getElementsByClassName()
+returns a node list (not an array)&lt;/li&gt;
+&lt;li&gt;document.getElementsByTagName()
+returns a node list (not an array)&lt;/li&gt;
+&lt;li&gt;document.querySelector()
+returns the first match&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;dom-manipulation&#34;&gt;DOM Manipulation&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;change style
+&lt;code&gt;javascript
+el.style.color = &#39;blue&#39;;
+el.style.marginTop = &#39;200px&#39;;
+&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;change CSS Class to an element
+&lt;code&gt;javascript
+el.classList.add(&#39;CSSclassname&#39;);
+el.classList.remove(&#39;CSSclassname&#39;);
+el.classList.toggle(&#39;CSSclassname&#39;);
+&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>What is execution Context in Javascript?</title>
       <link>https://hchenfred.github.io/post/executioncontext/</link>
       <pubDate>Mon, 05 Jun 2017 09:36:53 -0700</pubDate>
       
       <guid>https://hchenfred.github.io/post/executioncontext/</guid>
-      <description>&lt;p&gt;Execution context is a very important concept in Javascript. At one point, I thought I fully understand it. However, if you ask me to describe it in detail, I can&amp;rsquo;t. I just can&amp;rsquo;t. What does it mean? It means I don&amp;rsquo;t understand it.&lt;/p&gt;
-
-&lt;p&gt;The article is for me to try to explain it so that it deepens my understanding.&lt;/p&gt;
+      <description>&lt;p&gt;Execution context is a very important concept in Javascript.
+The article is for me to try to explain it so that it deepens my understanding.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Global Execution Context
