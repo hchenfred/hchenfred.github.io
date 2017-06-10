@@ -11,6 +11,19 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>What is REST?</title>
+      <link>https://hchenfred.github.io/post/rest/</link>
+      <pubDate>Tue, 06 Jun 2017 22:21:33 -0700</pubDate>
+      
+      <guid>https://hchenfred.github.io/post/rest/</guid>
+      <description>&lt;p&gt;What is REST?
+It is just a mapping between HTTP routes and CRUD(Create, Read, Update and Destroy). It is a convention.
+To illustrate how to create HTTP routes in back-end, a picture is necessary.
+&lt;img src=&#34;https://hchenfred.github.io/img/rest.png&#34; alt=&#34;RESTFUL&#34; title=&#34;RESTFUL&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Javascript DOM Selector and Manipulation</title>
       <link>https://hchenfred.github.io/post/javascriptdom/</link>
       <pubDate>Mon, 05 Jun 2017 12:05:28 -0700</pubDate>
@@ -33,18 +46,19 @@ returns the first match&lt;/li&gt;
 
 &lt;h2 id=&#34;dom-manipulation&#34;&gt;DOM Manipulation&lt;/h2&gt;
 
+&lt;h3 id=&#34;change-style&#34;&gt;change style&lt;/h3&gt;
+
 &lt;ul&gt;
-&lt;li&gt;change style
-&lt;code&gt;javascript
-el.style.color = &#39;blue&#39;;
-el.style.marginTop = &#39;200px&#39;;
-&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;change CSS Class to an element
-&lt;code&gt;javascript
-el.classList.add(&#39;CSSclassname&#39;);
-el.classList.remove(&#39;CSSclassname&#39;);
-el.classList.toggle(&#39;CSSclassname&#39;);
-&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;el.style.color = &amp;lsquo;blue&amp;rsquo;;&lt;/li&gt;
+&lt;li&gt;el.style.marginTop = &amp;lsquo;200px&amp;rsquo;;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;change-css-class-to-an-element&#34;&gt;change CSS Class to an element&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;el.classList.add(&amp;lsquo;CSSclassname&amp;rsquo;);&lt;/li&gt;
+&lt;li&gt;el.classList.remove(&amp;lsquo;CSSclassname&amp;rsquo;);&lt;/li&gt;
+&lt;li&gt;el.classList.toggle(&amp;lsquo;CSSclassname&amp;rsquo;);&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
