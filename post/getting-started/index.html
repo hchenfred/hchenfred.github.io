@@ -205,7 +205,20 @@
 </div>
 
     <div class="article-style" itemprop="articleBody">
-      <p>A really good article talking about what a front-end engineer needs to know before an interview.</p>
+      <p>A really good article talking about what a front-end engineer needs to know before an interview.
+- What happens when you type in www.google.com in your browser?
+* when you want to connect to www.google.com, you need to get the IP address of the server where google web services are hosted. DNS (domain name system) resolves an URL to an IP address.
+  * check browser cache: browsers maintain cache of DNS records for some fixed duration.
+  * check OS cache
+  * check router cache
+  * check ISP cache
+* Browser initiates TCP connection with the server
+* Browser sends a HTTP GET request to the server
+  * GET request contains cookies, User-Agent and etc.
+* Server handles the request
+  * HTML response is sent back to the client from corresponding request handler
+* Browser receives HTTP response
+* Browser renders DOM and it sends GET request to request img or CSS files and etc</p>
 
 <ul>
 <li>what is hoisting?
