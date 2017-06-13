@@ -129,6 +129,38 @@
   
   <div>
     
+    <h2><a href="https://hchenfred.github.io/post/throttle/">Throttle vs. Debounce</a></h2>
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    <time datetime="2017-06-13 08:52:24 -0700 PDT" itemprop="datePublished">
+      Tue, Jun 13, 2017
+    </time>
+  </span>
+
+  
+
+  
+  
+  
+  
+
+  
+
+</div>
+
+    <div class="article-style"><p>
+      
+      What is Throttle? Throttling enforces the maximum number of time a function can be called over time. Let&rsquo;s look at how to use throttle function in underscore.js library. This is a simple implementation of throttle function.
+var throttle = (func, waitTime) =&gt; { var wait = false; return function() { if (!wait) { func.call(); setInterval(() =&gt; { wait = true; }, waitTime); } }; }  What is Debounce? Debouncing enforces that a function not be called again until a certain amount of time has passed without it being called.
+      
+    </p></div>
+  </div>
+  
+  <div>
+    
     <h2><a href="https://hchenfred.github.io/post/rest/">What is REST?</a></h2>
     
 

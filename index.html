@@ -383,6 +383,13 @@
     <h1>Recent Posts</h1>
     
     
+    <p class="view-all">
+      <a href="/post/">
+        More Posts
+        <i class="fa fa-angle-double-right"></i>
+      </a>
+    </p>
+    
 
   </div>
   <div class="col-xs-12 col-md-8">
@@ -390,6 +397,51 @@
     
 
     
+      
+        
+        
+
+
+<div class="article-list-item" itemscope itemprop="blogPost">
+  
+  
+  <h3 class="article-title" itemprop="name">
+    <a href="https://hchenfred.github.io/post/throttle/" itemprop="url">Throttle vs. Debounce</a>
+  </h3>
+  
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    <time datetime="2017-06-13 08:52:24 -0700 PDT" itemprop="datePublished">
+      Tue, Jun 13, 2017
+    </time>
+  </span>
+
+  
+
+  
+  
+  
+  
+
+  
+
+</div>
+
+  <div class="article-style" itemprop="articleBody">
+    
+    What is Throttle? Throttling enforces the maximum number of time a function can be called over time. Let&rsquo;s look at how to use throttle function in underscore.js library. This is a simple implementation of throttle function.
+var throttle = (func, waitTime) =&gt; { var wait = false; return function() { if (!wait) { func.call(); setInterval(() =&gt; { wait = true; }, waitTime); } }; }  What is Debounce? Debouncing enforces that a function not be called again until a certain amount of time has passed without it being called.
+    
+  </div>
+  <p class="read-more">
+    <a href="https://hchenfred.github.io/post/throttle/" class="btn btn-primary btn-outline">
+      CONTINUE READING
+    </a>
+  </p>
+</div>
+
       
         
         
@@ -615,62 +667,6 @@ Global execution context is not inside a function</p></li>
   </div>
   <p class="read-more">
     <a href="https://hchenfred.github.io/post/functional-programming/" class="btn btn-primary btn-outline">
-      CONTINUE READING
-    </a>
-  </p>
-</div>
-
-      
-        
-        
-
-
-<div class="article-list-item" itemscope itemprop="blogPost">
-  
-  
-  <a href="https://hchenfred.github.io/post/getting-started/">
-    <img src="/img/view2.jpeg" class="article-banner" itemprop="image">
-  </a>
-  
-  <h3 class="article-title" itemprop="name">
-    <a href="https://hchenfred.github.io/post/getting-started/" itemprop="url">Javascript Interview Questions</a>
-  </h3>
-  
-
-<div class="article-metadata">
-
-  <span class="article-date">
-    <time datetime="2017-06-03 12:00:00 &#43;0000 UTC" itemprop="datePublished">
-      Sat, Jun 3, 2017
-    </time>
-  </span>
-
-  
-
-  
-  
-  
-  <span class="article-tags">
-    <i class="fa fa-tags"></i>
-    
-    <a href="/tags/javascript">javascript</a
-    >
-    
-  </span>
-  
-  
-
-  
-
-</div>
-
-  <div class="article-style" itemprop="articleBody">
-    
-    <p>some common Javascript interview questions</p>
-    
-  </div>
-  <p class="read-more">
-    <a href="https://hchenfred.github.io/post/getting-started/" class="btn btn-primary btn-outline">
       CONTINUE READING
     </a>
   </p>

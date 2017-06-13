@@ -34,11 +34,11 @@
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
 
-  <link rel="canonical" href="">
+  <link rel="canonical" href="https://hchenfred.github.io/post/throttle/">
 
   
 
-  <title>404 Page not found | Huan Chen</title>
+  <title>Throttle vs. Debounce | Huan Chen</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
@@ -120,58 +120,141 @@
   </div>
 </nav>
 
-<div class="container">
 
-  <h1>Page not found</h1>
-  <p>Maybe you were looking for one of these?</p>
+<article class="article" itemscope itemtype="http://schema.org/Article">
 
-  <h2>Recent Posts</h2>
-  
-  <ul>
-    <li><a href="https://hchenfred.github.io/post/throttle/">Throttle vs. Debounce</a></li>
-  </ul>
-  
-  <ul>
-    <li><a href="https://hchenfred.github.io/post/rest/">What is REST?</a></li>
-  </ul>
-  
-  <ul>
-    <li><a href="https://hchenfred.github.io/post/javascriptdom/">Javascript DOM Selector and Manipulation</a></li>
-  </ul>
-  
-  <ul>
-    <li><a href="https://hchenfred.github.io/post/executioncontext/">What is execution Context in Javascript?</a></li>
-  </ul>
-  
-  <ul>
-    <li><a href="https://hchenfred.github.io/post/functional-programming/">Functional Programming</a></li>
-  </ul>
-  
-  <ul>
-    <li><a href="https://hchenfred.github.io/post/getting-started/">Javascript Interview Questions</a></li>
-  </ul>
-  
-  <ul>
-    <li><a href="https://hchenfred.github.io/post/">Posts</a></li>
-  </ul>
   
 
-  <h2>Recent Publications</h2>
+
+  <div class="article-container">
+    <h1 itemprop="name">Throttle vs. Debounce</h1>
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    <time datetime="2017-06-13 08:52:24 -0700 PDT" itemprop="datePublished">
+      Tue, Jun 13, 2017
+    </time>
+  </span>
+
   
-  <ul>
-    <li><a href="https://hchenfred.github.io/publication/">Publications</a></li>
-  </ul>
+
   
-  <ul>
-    <li><a href="https://hchenfred.github.io/publication/person-re-identification/">A Person Re-Identification System For Mobile Devices</a></li>
-  </ul>
   
-  <ul>
-    <li><a href="https://hchenfred.github.io/publication/clothing-search/">Mobile visual clothing search</a></li>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fhchenfred.github.io%2fpost%2fthrottle%2f"
+         target="_blank">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Throttle%20vs.%20Debounce&amp;url=https%3a%2f%2fhchenfred.github.io%2fpost%2fthrottle%2f"
+         target="_blank">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fhchenfred.github.io%2fpost%2fthrottle%2f&amp;title=Throttle%20vs.%20Debounce"
+         target="_blank">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fhchenfred.github.io%2fpost%2fthrottle%2f&amp;title=Throttle%20vs.%20Debounce"
+         target="_blank">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Throttle%20vs.%20Debounce&amp;body=https%3a%2f%2fhchenfred.github.io%2fpost%2fthrottle%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
   </ul>
+</div>
+
+
   
 
 </div>
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<h2 id="what-is-throttle">What is Throttle?</h2>
+
+<p>Throttling enforces the maximum number of time a function can be called over time.
+Let&rsquo;s look at how to use throttle function in underscore.js library.
+<img src="/img/throttle.png" alt="Let's look at how to use throttle function in underscore.js library" />
+This is a simple implementation of throttle function.</p>
+
+<pre><code class="language-javascript">var throttle = (func, waitTime) =&gt; {
+  var wait = false;
+  return function() {
+    if (!wait) {
+      func.call();
+      setInterval(() =&gt; {
+        wait = true;
+      }, waitTime);
+    }
+  };
+}
+</code></pre>
+
+<h2 id="what-is-debounce">What is Debounce?</h2>
+
+<p>Debouncing enforces that a function not be called again until a certain amount of time has passed without it being called.
+<img src="/img/debounce.png" alt="Let's look at how to use debounce function in underscore.js library" /></p>
+
+<pre><code class="language-javascript">function debounce(fn, delay) {
+  var timer = null;
+  return function () {
+    var context = this, args = arguments;
+    clearTimeout(timer);
+    timer = setTimeout(function () {
+      fn.apply(context, args);
+    }, delay);
+  };
+}
+</code></pre>
+
+    </div>
+  </div>
+
+</article>
+
+<div class="container">
+  <nav>
+  <ul class="pager">
+    
+    <li class="previous"><a href="https://hchenfred.github.io/post/rest/"><span
+      aria-hidden="true">&larr;</span> What is REST?</a></li>
+    
+
+    
+  </ul>
+</nav>
+
+</div>
+
+<div class="article-container">
+  
+
+</div>
+
 <footer class="site-footer">
   <div class="container">
     <p class="powered-by">

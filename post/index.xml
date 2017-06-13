@@ -11,6 +11,53 @@
     <atom:link href="/post/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Throttle vs. Debounce</title>
+      <link>https://hchenfred.github.io/post/throttle/</link>
+      <pubDate>Tue, 13 Jun 2017 08:52:24 -0700</pubDate>
+      
+      <guid>https://hchenfred.github.io/post/throttle/</guid>
+      <description>
+
+&lt;h2 id=&#34;what-is-throttle&#34;&gt;What is Throttle?&lt;/h2&gt;
+
+&lt;p&gt;Throttling enforces the maximum number of time a function can be called over time.
+Let&amp;rsquo;s look at how to use throttle function in underscore.js library.
+&lt;img src=&#34;https://hchenfred.github.io/img/throttle.png&#34; alt=&#34;Let&#39;s look at how to use throttle function in underscore.js library&#34; /&gt;
+This is a simple implementation of throttle function.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var throttle = (func, waitTime) =&amp;gt; {
+  var wait = false;
+  return function() {
+    if (!wait) {
+      func.call();
+      setInterval(() =&amp;gt; {
+        wait = true;
+      }, waitTime);
+    }
+  };
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;what-is-debounce&#34;&gt;What is Debounce?&lt;/h2&gt;
+
+&lt;p&gt;Debouncing enforces that a function not be called again until a certain amount of time has passed without it being called.
+&lt;img src=&#34;https://hchenfred.github.io/img/debounce.png&#34; alt=&#34;Let&#39;s look at how to use debounce function in underscore.js library&#34; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;function debounce(fn, delay) {
+  var timer = null;
+  return function () {
+    var context = this, args = arguments;
+    clearTimeout(timer);
+    timer = setTimeout(function () {
+      fn.apply(context, args);
+    }, delay);
+  };
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
       <title>What is REST?</title>
       <link>https://hchenfred.github.io/post/rest/</link>
       <pubDate>Tue, 06 Jun 2017 22:21:33 -0700</pubDate>
