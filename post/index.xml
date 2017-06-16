@@ -11,6 +11,109 @@
     <atom:link href="/post/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>This is a leetcode problem 133 Clone Graph</title>
+      <link>https://hchenfred.github.io/post/clonegraph/</link>
+      <pubDate>Fri, 16 Jun 2017 16:45:29 -0700</pubDate>
+      
+      <guid>https://hchenfred.github.io/post/clonegraph/</guid>
+      <description>
+
+&lt;h2 id=&#34;clone-an-undirected-graph-each-node-in-the-graph-contains-a-label-and-a-list-of-its-neighbors&#34;&gt;Clone an undirected graph. Each node in the graph contains a label and a list of its neighbors.&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;use BFS to solve this problem.&lt;/li&gt;
+&lt;li&gt;use a Map in javascript to store a mapping between nodes in original graph and nodes in new graph.&lt;/li&gt;
+&lt;li&gt;when using BFS to traverse the original graph, if a neighbor is already in the map, it means the corresponding node has been created and we just need to connect two nodes in the new graph&lt;/li&gt;
+&lt;li&gt;when using BFS to traverse the original graph, if a neighbor isn&amp;rsquo;t in the map, we create a new node in the new graph, push the neighbor in the queue and connect two nodes in the new graph.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;/**
+ * @param {UndirectedGraphNode} graph
+ * @return {UndirectedGraphNode}
+ */
+var cloneGraph = function(graph) {
+    if (graph === null) {
+        return null;
+    }
+    //bfs
+    var queue = [];
+    queue.push(graph);
+    var map = new Map();
+    var head = new UndirectedGraphNode(graph.label);
+    map.set(graph, head);
+    
+    while (queue.length !== 0) {
+        var curr = queue.shift();
+        // console.log(curr);
+        var neighbors = curr.neighbors;
+        for (var i = 0; i &amp;lt; neighbors.length; i++) {
+            var neighbor = neighbors[i];
+            // this neighbor has not been visited
+            if (map.get(neighbor) === undefined) {
+                var copyNeighbor = new UndirectedGraphNode(neighbor.label);
+                map.set(neighbor, copyNeighbor);
+                map.get(curr).neighbors.push(copyNeighbor);
+                queue.push(neighbor);
+            // this neighbor has been visited
+            } else {
+               map.get(curr).neighbors.push(map.get(neighbor));
+            }
+        }
+    }
+    
+    return head;
+};
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ten JavaScript Questions</title>
+      <link>https://hchenfred.github.io/post/10javascriptquestions/</link>
+      <pubDate>Fri, 16 Jun 2017 08:58:15 -0700</pubDate>
+      
+      <guid>https://hchenfred.github.io/post/10javascriptquestions/</guid>
+      <description>
+
+&lt;h2 id=&#34;ten-javascript-questions&#34;&gt;Ten JavaScript Questions&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Differences between keyword var and let&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;let was introduced in ES6, old browsers won&amp;rsquo;t support it, var has been around for a long time&lt;/li&gt;
+&lt;li&gt;let is block scoped while var is function scoped. When a var variable is declared in a block, you can still access it outside the block&lt;/li&gt;
+&lt;li&gt;let is not hoisted while var is hoisted&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Differences between &amp;lsquo;undefined&amp;rsquo; and &amp;lsquo;null&amp;rsquo;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;undefined means a variable is declared but never assigned to a value&lt;/li&gt;
+&lt;li&gt;null means a variable is declared and you assigned a value null to indicate that it is empty or it does not have anything.&lt;/li&gt;
+&lt;li&gt;typeof(undefined) === &amp;lsquo;undefined&amp;rsquo; typeof(null) === &amp;lsquo;object&amp;rsquo;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;What is arrow function?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;it is a ES6 feature.&lt;/li&gt;
+&lt;li&gt;it doesn&amp;rsquo;t create a new scope as normal functions do. Instead, it shares the same scope with its first outer function. It helps to avoid the issue with keyword &amp;lsquo;this&amp;rsquo; not being the object that is intended.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;What is prototypal inheritance?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In JavaScript, all functions are objects. And they all have a property called &amp;lsquo;prototype&amp;rsquo;&lt;/li&gt;
+&lt;li&gt;You can add methods to &amp;lsquo;prototype&amp;rsquo;&lt;/li&gt;
+&lt;li&gt;when you create instance objects from constructor functions, those instance object will inherit the methods from constructor&amp;rsquo;s prototype
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Throttle vs. Debounce</title>
       <link>https://hchenfred.github.io/post/throttle/</link>
       <pubDate>Tue, 13 Jun 2017 08:52:24 -0700</pubDate>

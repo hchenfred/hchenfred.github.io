@@ -34,11 +34,11 @@
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
 
-  <link rel="canonical" href="https://hchenfred.github.io/post/throttle/">
+  <link rel="canonical" href="https://hchenfred.github.io/post/10javascriptquestions/">
 
   
 
-  <title>Throttle vs. Debounce | Huan Chen</title>
+  <title>Ten JavaScript Questions | Huan Chen</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
@@ -127,14 +127,14 @@
 
 
   <div class="article-container">
-    <h1 itemprop="name">Throttle vs. Debounce</h1>
+    <h1 itemprop="name">Ten JavaScript Questions</h1>
     
 
 <div class="article-metadata">
 
   <span class="article-date">
-    <time datetime="2017-06-13 08:52:24 -0700 PDT" itemprop="datePublished">
-      Tue, Jun 13, 2017
+    <time datetime="2017-06-16 08:58:15 -0700 PDT" itemprop="datePublished">
+      Fri, Jun 16, 2017
     </time>
   </span>
 
@@ -151,35 +151,35 @@
   <ul class="share">
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fhchenfred.github.io%2fpost%2fthrottle%2f"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fhchenfred.github.io%2fpost%2f10javascriptquestions%2f"
          target="_blank">
         <i class="fa fa-facebook"></i>
       </a>
     </li>
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Throttle%20vs.%20Debounce&amp;url=https%3a%2f%2fhchenfred.github.io%2fpost%2fthrottle%2f"
+         href="https://twitter.com/intent/tweet?text=Ten%20JavaScript%20Questions&amp;url=https%3a%2f%2fhchenfred.github.io%2fpost%2f10javascriptquestions%2f"
          target="_blank">
         <i class="fa fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fhchenfred.github.io%2fpost%2fthrottle%2f&amp;title=Throttle%20vs.%20Debounce"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fhchenfred.github.io%2fpost%2f10javascriptquestions%2f&amp;title=Ten%20JavaScript%20Questions"
          target="_blank">
         <i class="fa fa-linkedin"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fhchenfred.github.io%2fpost%2fthrottle%2f&amp;title=Throttle%20vs.%20Debounce"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fhchenfred.github.io%2fpost%2f10javascriptquestions%2f&amp;title=Ten%20JavaScript%20Questions"
          target="_blank">
         <i class="fa fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=Throttle%20vs.%20Debounce&amp;body=https%3a%2f%2fhchenfred.github.io%2fpost%2fthrottle%2f">
+         href="mailto:?subject=Ten%20JavaScript%20Questions&amp;body=https%3a%2f%2fhchenfred.github.io%2fpost%2f10javascriptquestions%2f">
         <i class="fa fa-envelope"></i>
       </a>
     </li>
@@ -194,42 +194,41 @@
     <div class="article-style" itemprop="articleBody">
       
 
-<h2 id="what-is-throttle">What is Throttle?</h2>
+<h2 id="ten-javascript-questions">Ten JavaScript Questions</h2>
 
-<p>Throttling enforces the maximum number of time a function can be called over time.
-Let&rsquo;s look at how to use throttle function in underscore.js library.
-<img src="/img/throttle.png" alt="Let's look at how to use throttle function in underscore.js library" />
-This is a simple implementation of throttle function.</p>
+<ol>
+<li><p>Differences between keyword var and let</p>
 
-<pre><code class="language-javascript">var throttle = (func, waitTime) =&gt; {
-  var wait = false;
-  return function() {
-    if (!wait) {
-      func.call();
-      setInterval(() =&gt; {
-        wait = true;
-      }, waitTime);
-    }
-  };
-}
-</code></pre>
+<ul>
+<li>let was introduced in ES6, old browsers won&rsquo;t support it, var has been around for a long time</li>
+<li>let is block scoped while var is function scoped. When a var variable is declared in a block, you can still access it outside the block</li>
+<li>let is not hoisted while var is hoisted</li>
+</ul></li>
 
-<h2 id="what-is-debounce">What is Debounce?</h2>
+<li><p>Differences between &lsquo;undefined&rsquo; and &lsquo;null&rsquo;</p>
 
-<p>Debouncing enforces that a function not be called again until a certain amount of time has passed without it being called.
-<img src="/img/debounce.png" alt="Let's look at how to use debounce function in underscore.js library" /></p>
+<ul>
+<li>undefined means a variable is declared but never assigned to a value</li>
+<li>null means a variable is declared and you assigned a value null to indicate that it is empty or it does not have anything.</li>
+<li>typeof(undefined) === &lsquo;undefined&rsquo; typeof(null) === &lsquo;object&rsquo;</li>
+</ul></li>
 
-<pre><code class="language-javascript">function debounce(fn, delay) {
-  var timer = null;
-  return function () {
-    var context = this, args = arguments;
-    clearTimeout(timer);
-    timer = setTimeout(function () {
-      fn.apply(context, args);
-    }, delay);
-  };
-}
-</code></pre>
+<li><p>What is arrow function?</p>
+
+<ul>
+<li>it is a ES6 feature.</li>
+<li>it doesn&rsquo;t create a new scope as normal functions do. Instead, it shares the same scope with its first outer function. It helps to avoid the issue with keyword &lsquo;this&rsquo; not being the object that is intended.</li>
+</ul></li>
+
+<li><p>What is prototypal inheritance?</p>
+
+<ul>
+<li>In JavaScript, all functions are objects. And they all have a property called &lsquo;prototype&rsquo;</li>
+<li>You can add methods to &lsquo;prototype&rsquo;</li>
+<li>when you create instance objects from constructor functions, those instance object will inherit the methods from constructor&rsquo;s prototype
+<br /></li>
+</ul></li>
+</ol>
 
     </div>
   </div>
@@ -240,12 +239,12 @@ This is a simple implementation of throttle function.</p>
   <nav>
   <ul class="pager">
     
-    <li class="previous"><a href="https://hchenfred.github.io/post/rest/"><span
-      aria-hidden="true">&larr;</span> What is REST?</a></li>
+    <li class="previous"><a href="https://hchenfred.github.io/post/throttle/"><span
+      aria-hidden="true">&larr;</span> Throttle vs. Debounce</a></li>
     
 
     
-    <li class="next"><a href="https://hchenfred.github.io/post/10javascriptquestions/">Ten JavaScript Questions <span
+    <li class="next"><a href="https://hchenfred.github.io/post/clonegraph/">This is a leetcode problem 133 Clone Graph <span
       aria-hidden="true">&rarr;</span></a></li>
     
   </ul>

@@ -34,11 +34,11 @@
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
 
-  <link rel="canonical" href="https://hchenfred.github.io/post/throttle/">
+  <link rel="canonical" href="https://hchenfred.github.io/post/clonegraph/">
 
   
 
-  <title>Throttle vs. Debounce | Huan Chen</title>
+  <title>This is a leetcode problem 133 Clone Graph | Huan Chen</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
@@ -127,14 +127,14 @@
 
 
   <div class="article-container">
-    <h1 itemprop="name">Throttle vs. Debounce</h1>
+    <h1 itemprop="name">This is a leetcode problem 133 Clone Graph</h1>
     
 
 <div class="article-metadata">
 
   <span class="article-date">
-    <time datetime="2017-06-13 08:52:24 -0700 PDT" itemprop="datePublished">
-      Tue, Jun 13, 2017
+    <time datetime="2017-06-16 16:45:29 -0700 PDT" itemprop="datePublished">
+      Fri, Jun 16, 2017
     </time>
   </span>
 
@@ -151,35 +151,35 @@
   <ul class="share">
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fhchenfred.github.io%2fpost%2fthrottle%2f"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fhchenfred.github.io%2fpost%2fclonegraph%2f"
          target="_blank">
         <i class="fa fa-facebook"></i>
       </a>
     </li>
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Throttle%20vs.%20Debounce&amp;url=https%3a%2f%2fhchenfred.github.io%2fpost%2fthrottle%2f"
+         href="https://twitter.com/intent/tweet?text=This%20is%20a%20leetcode%20problem%20133%20Clone%20Graph&amp;url=https%3a%2f%2fhchenfred.github.io%2fpost%2fclonegraph%2f"
          target="_blank">
         <i class="fa fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fhchenfred.github.io%2fpost%2fthrottle%2f&amp;title=Throttle%20vs.%20Debounce"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fhchenfred.github.io%2fpost%2fclonegraph%2f&amp;title=This%20is%20a%20leetcode%20problem%20133%20Clone%20Graph"
          target="_blank">
         <i class="fa fa-linkedin"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fhchenfred.github.io%2fpost%2fthrottle%2f&amp;title=Throttle%20vs.%20Debounce"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fhchenfred.github.io%2fpost%2fclonegraph%2f&amp;title=This%20is%20a%20leetcode%20problem%20133%20Clone%20Graph"
          target="_blank">
         <i class="fa fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=Throttle%20vs.%20Debounce&amp;body=https%3a%2f%2fhchenfred.github.io%2fpost%2fthrottle%2f">
+         href="mailto:?subject=This%20is%20a%20leetcode%20problem%20133%20Clone%20Graph&amp;body=https%3a%2f%2fhchenfred.github.io%2fpost%2fclonegraph%2f">
         <i class="fa fa-envelope"></i>
       </a>
     </li>
@@ -194,41 +194,51 @@
     <div class="article-style" itemprop="articleBody">
       
 
-<h2 id="what-is-throttle">What is Throttle?</h2>
+<h2 id="clone-an-undirected-graph-each-node-in-the-graph-contains-a-label-and-a-list-of-its-neighbors">Clone an undirected graph. Each node in the graph contains a label and a list of its neighbors.</h2>
 
-<p>Throttling enforces the maximum number of time a function can be called over time.
-Let&rsquo;s look at how to use throttle function in underscore.js library.
-<img src="/img/throttle.png" alt="Let's look at how to use throttle function in underscore.js library" />
-This is a simple implementation of throttle function.</p>
+<ul>
+<li>use BFS to solve this problem.</li>
+<li>use a Map in javascript to store a mapping between nodes in original graph and nodes in new graph.</li>
+<li>when using BFS to traverse the original graph, if a neighbor is already in the map, it means the corresponding node has been created and we just need to connect two nodes in the new graph</li>
+<li>when using BFS to traverse the original graph, if a neighbor isn&rsquo;t in the map, we create a new node in the new graph, push the neighbor in the queue and connect two nodes in the new graph.</li>
+</ul>
 
-<pre><code class="language-javascript">var throttle = (func, waitTime) =&gt; {
-  var wait = false;
-  return function() {
-    if (!wait) {
-      func.call();
-      setInterval(() =&gt; {
-        wait = true;
-      }, waitTime);
+<pre><code class="language-javascript">/**
+ * @param {UndirectedGraphNode} graph
+ * @return {UndirectedGraphNode}
+ */
+var cloneGraph = function(graph) {
+    if (graph === null) {
+        return null;
     }
-  };
-}
-</code></pre>
-
-<h2 id="what-is-debounce">What is Debounce?</h2>
-
-<p>Debouncing enforces that a function not be called again until a certain amount of time has passed without it being called.
-<img src="/img/debounce.png" alt="Let's look at how to use debounce function in underscore.js library" /></p>
-
-<pre><code class="language-javascript">function debounce(fn, delay) {
-  var timer = null;
-  return function () {
-    var context = this, args = arguments;
-    clearTimeout(timer);
-    timer = setTimeout(function () {
-      fn.apply(context, args);
-    }, delay);
-  };
-}
+    //bfs
+    var queue = [];
+    queue.push(graph);
+    var map = new Map();
+    var head = new UndirectedGraphNode(graph.label);
+    map.set(graph, head);
+    
+    while (queue.length !== 0) {
+        var curr = queue.shift();
+        // console.log(curr);
+        var neighbors = curr.neighbors;
+        for (var i = 0; i &lt; neighbors.length; i++) {
+            var neighbor = neighbors[i];
+            // this neighbor has not been visited
+            if (map.get(neighbor) === undefined) {
+                var copyNeighbor = new UndirectedGraphNode(neighbor.label);
+                map.set(neighbor, copyNeighbor);
+                map.get(curr).neighbors.push(copyNeighbor);
+                queue.push(neighbor);
+            // this neighbor has been visited
+            } else {
+               map.get(curr).neighbors.push(map.get(neighbor));
+            }
+        }
+    }
+    
+    return head;
+};
 </code></pre>
 
     </div>
@@ -240,13 +250,10 @@ This is a simple implementation of throttle function.</p>
   <nav>
   <ul class="pager">
     
-    <li class="previous"><a href="https://hchenfred.github.io/post/rest/"><span
-      aria-hidden="true">&larr;</span> What is REST?</a></li>
+    <li class="previous"><a href="https://hchenfred.github.io/post/10javascriptquestions/"><span
+      aria-hidden="true">&larr;</span> Ten JavaScript Questions</a></li>
     
 
-    
-    <li class="next"><a href="https://hchenfred.github.io/post/10javascriptquestions/">Ten JavaScript Questions <span
-      aria-hidden="true">&rarr;</span></a></li>
     
   </ul>
 </nav>
