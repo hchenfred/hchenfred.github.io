@@ -205,38 +205,58 @@
 </div>
 
     <div class="article-style" itemprop="articleBody">
-      <p>A really good article talking about what a front-end engineer needs to know before an interview.
-- What happens when you type in www.google.com in your browser?
-* when you want to connect to www.google.com, you need to get the IP address of the server where google web services are hosted. DNS (domain name system) resolves an URL to an IP address.
-  * check browser cache: browsers maintain cache of DNS records for some fixed duration.
-  * check OS cache
-  * check router cache
-  * check ISP cache
-* Browser initiates TCP connection with the server
-* Browser sends a HTTP GET request to the server
-  * GET request contains cookies, User-Agent and etc.
-* Server handles the request
-  * HTML response is sent back to the client from corresponding request handler
-* Browser receives HTTP response
-* Browser renders DOM and it sends GET request to request img or CSS files and etc</p>
+      
+
+<h2 id="a-really-good-article-talking-about-what-a-front-end-engineer-needs-to-know-before-an-interview">A really good article talking about what a front-end engineer needs to know before an interview.</h2>
+
+<h3 id="what-happens-when-you-type-in-www-google-com-in-your-browser">What happens when you type in www.google.com in your browser?</h3>
 
 <ul>
-<li>what is hoisting?
-hoisting means move variable and function declarations to the top so you will be able to call a function or use a variable before its declaration
-function declaration takes precedence on variable declaration</li>
-<li>Difference between ‘null’ and ‘undefined’
-undefined means a variable is declared but not assigned a value yet
-null means that programmers assign a null value to an object to represent there is none</li>
-<li>The ‘arguments’ object
-arguments is an array-like object that corresponds to the arguments passed in a function
+<li>when you want to connect to www.google.com, you need to get the IP address of the server where google web services are hosted. DNS (domain name system) resolves an URL to an IP address.
+
+<ul>
+<li>check browser cache: browsers maintain cache of DNS records for some fixed duration.</li>
+<li>check OS cache</li>
+<li>check router cache</li>
+<li>check ISP cache</li>
+</ul></li>
+<li>Browser initiates TCP connection with the server</li>
+<li>Browser sends a HTTP GET request to the server
+
+<ul>
+<li>GET request contains cookies, User-Agent and etc.</li>
+</ul></li>
+<li>Server handles the request
+
+<ul>
+<li>HTML response is sent back to the client from corresponding request handler</li>
+</ul></li>
+<li>Browser receives HTTP response</li>
+<li>Browser renders DOM and it sends GET request to request img or CSS files and etc</li>
+</ul>
+
+<h3 id="what-is-hoisting">what is hoisting?</h3>
+
+<p>hoisting means move variable and function declarations to the top so you will be able to call a function or use a variable before its declaration
+function declaration takes precedence on variable declaration</p>
+
+<h3 id="difference-between-null-and-undefined">Difference between ‘null’ and ‘undefined’</h3>
+
+<p>undefined means a variable is declared but not assigned a value yet
+null means that programmers assign a null value to an object to represent there is none</p>
+
+<h3 id="the-arguments-object">The ‘arguments’ object</h3>
+
+<p>arguments is an array-like object that corresponds to the arguments passed in a function
 How can we turn this array-like ‘argument’ to an actual array?
 var args = Array.from(arguments);
-var args = […arguments];</li>
-<li>What is IIFE? Why do we need to use it?
-IIFE is immediately invoked function expression.
+var args = […arguments];</p>
+
+<h3 id="what-is-iife-why-do-we-need-to-use-it">What is IIFE? Why do we need to use it?</h3>
+
+<p>IIFE is immediately invoked function expression.
 the variables defined in IIFE is only accessible within IIFE, it prevents ‘var’ from polluting the global.
-in ES6, the keyword ‘let’ can be used to solve this problem</li>
-</ul>
+in ES6, the keyword ‘let’ can be used to solve this problem</p>
 
     </div>
   </div>

@@ -11,6 +11,72 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Tree</title>
+      <link>https://hchenfred.github.io/post/tree/</link>
+      <pubDate>Sun, 18 Jun 2017 10:01:47 -0700</pubDate>
+      
+      <guid>https://hchenfred.github.io/post/tree/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Binary Search</title>
+      <link>https://hchenfred.github.io/post/binarysearch/</link>
+      <pubDate>Sat, 17 Jun 2017 10:15:45 -0700</pubDate>
+      
+      <guid>https://hchenfred.github.io/post/binarysearch/</guid>
+      <description>
+
+&lt;h1 id=&#34;binary-search&#34;&gt;Binary Search&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Given a sorted array, find any/first/last element in the array&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Time complexity T(n) = T(n/2) + O(1)
+                    = T(n/4) + O(1) + O(1)
+                    = T(n/8) + O(1) + O(1) + O(1) = &amp;hellip;.. = O(logn)&lt;/p&gt;
+
+&lt;h2 id=&#34;how-to-implement-binary-search&#34;&gt;How to implement binary search?&lt;/h2&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;use while loop&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;What&amp;rsquo;s the condition in while loop?
+start + 1 &amp;lt; end (vary important)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;How to calculate mid point?
+mid = start + Math.floor((end - start)/2);&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Implement a LRU Cache</title>
+      <link>https://hchenfred.github.io/post/lru/</link>
+      <pubDate>Sat, 17 Jun 2017 08:15:41 -0700</pubDate>
+      
+      <guid>https://hchenfred.github.io/post/lru/</guid>
+      <description>
+
+&lt;h2 id=&#34;lru-cache&#34;&gt;LRU Cache&lt;/h2&gt;
+
+&lt;p&gt;Design and implement a data structure for Least Recently Used (LRU) cache. It should support the following operations: get and put.&lt;/p&gt;
+
+&lt;p&gt;get(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1.
+put(key, value) - Set or insert the value if the key is not already present. When the cache reached its capacity, it should invalidate the least recently used item before inserting a new item.&lt;/p&gt;
+
+&lt;p&gt;Follow up:
+Could you do both operations in O(1) time complexity?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;How can we do get(key) in O(1)?
+We think of a hash table&lt;/li&gt;
+&lt;li&gt;How can we do put(key, value) in O(1)?
+Hash table. However, we need to keep track of the least recently used item so that we can delete it when the cache reaches its capacity. How can we keep track of the least recently used item? We think of a doubly linked list that allows us to move element in constant time&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>This is a leetcode problem 133 Clone Graph</title>
       <link>https://hchenfred.github.io/post/clonegraph/</link>
       <pubDate>Fri, 16 Jun 2017 16:45:29 -0700</pubDate>
@@ -259,38 +325,58 @@ For the same input, you always get the same output. For example, if a function�
       <pubDate>Sat, 03 Jun 2017 12:00:00 +0000</pubDate>
       
       <guid>https://hchenfred.github.io/post/getting-started/</guid>
-      <description>&lt;p&gt;A really good article talking about what a front-end engineer needs to know before an interview.
-- What happens when you type in www.google.com in your browser?
-* when you want to connect to www.google.com, you need to get the IP address of the server where google web services are hosted. DNS (domain name system) resolves an URL to an IP address.
-  * check browser cache: browsers maintain cache of DNS records for some fixed duration.
-  * check OS cache
-  * check router cache
-  * check ISP cache
-* Browser initiates TCP connection with the server
-* Browser sends a HTTP GET request to the server
-  * GET request contains cookies, User-Agent and etc.
-* Server handles the request
-  * HTML response is sent back to the client from corresponding request handler
-* Browser receives HTTP response
-* Browser renders DOM and it sends GET request to request img or CSS files and etc&lt;/p&gt;
+      <description>
+
+&lt;h2 id=&#34;a-really-good-article-talking-about-what-a-front-end-engineer-needs-to-know-before-an-interview&#34;&gt;A really good article talking about what a front-end engineer needs to know before an interview.&lt;/h2&gt;
+
+&lt;h3 id=&#34;what-happens-when-you-type-in-www-google-com-in-your-browser&#34;&gt;What happens when you type in www.google.com in your browser?&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;what is hoisting?
-hoisting means move variable and function declarations to the top so you will be able to call a function or use a variable before its declaration
-function declaration takes precedence on variable declaration&lt;/li&gt;
-&lt;li&gt;Difference between ‘null’ and ‘undefined’
-undefined means a variable is declared but not assigned a value yet
-null means that programmers assign a null value to an object to represent there is none&lt;/li&gt;
-&lt;li&gt;The ‘arguments’ object
-arguments is an array-like object that corresponds to the arguments passed in a function
+&lt;li&gt;when you want to connect to www.google.com, you need to get the IP address of the server where google web services are hosted. DNS (domain name system) resolves an URL to an IP address.
+
+&lt;ul&gt;
+&lt;li&gt;check browser cache: browsers maintain cache of DNS records for some fixed duration.&lt;/li&gt;
+&lt;li&gt;check OS cache&lt;/li&gt;
+&lt;li&gt;check router cache&lt;/li&gt;
+&lt;li&gt;check ISP cache&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Browser initiates TCP connection with the server&lt;/li&gt;
+&lt;li&gt;Browser sends a HTTP GET request to the server
+
+&lt;ul&gt;
+&lt;li&gt;GET request contains cookies, User-Agent and etc.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Server handles the request
+
+&lt;ul&gt;
+&lt;li&gt;HTML response is sent back to the client from corresponding request handler&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Browser receives HTTP response&lt;/li&gt;
+&lt;li&gt;Browser renders DOM and it sends GET request to request img or CSS files and etc&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;what-is-hoisting&#34;&gt;what is hoisting?&lt;/h3&gt;
+
+&lt;p&gt;hoisting means move variable and function declarations to the top so you will be able to call a function or use a variable before its declaration
+function declaration takes precedence on variable declaration&lt;/p&gt;
+
+&lt;h3 id=&#34;difference-between-null-and-undefined&#34;&gt;Difference between ‘null’ and ‘undefined’&lt;/h3&gt;
+
+&lt;p&gt;undefined means a variable is declared but not assigned a value yet
+null means that programmers assign a null value to an object to represent there is none&lt;/p&gt;
+
+&lt;h3 id=&#34;the-arguments-object&#34;&gt;The ‘arguments’ object&lt;/h3&gt;
+
+&lt;p&gt;arguments is an array-like object that corresponds to the arguments passed in a function
 How can we turn this array-like ‘argument’ to an actual array?
 var args = Array.from(arguments);
-var args = […arguments];&lt;/li&gt;
-&lt;li&gt;What is IIFE? Why do we need to use it?
-IIFE is immediately invoked function expression.
+var args = […arguments];&lt;/p&gt;
+
+&lt;h3 id=&#34;what-is-iife-why-do-we-need-to-use-it&#34;&gt;What is IIFE? Why do we need to use it?&lt;/h3&gt;
+
+&lt;p&gt;IIFE is immediately invoked function expression.
 the variables defined in IIFE is only accessible within IIFE, it prevents ‘var’ from polluting the global.
-in ES6, the keyword ‘let’ can be used to solve this problem&lt;/li&gt;
-&lt;/ul&gt;
+in ES6, the keyword ‘let’ can be used to solve this problem&lt;/p&gt;
 </description>
     </item>
     
@@ -401,26 +487,6 @@ in ES6, the keyword ‘let’ can be used to solve this problem&lt;/li&gt;
       
       <guid>https://hchenfred.github.io/talk/example-talk/</guid>
       <description>&lt;p&gt;Embed your slides or video here using &lt;a href=&#34;https://gcushen.github.io/hugo-academic-demo/post/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;shortcodes&lt;/a&gt;. Further details can easily be added using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>A Person Re-Identification System For Mobile Devices</title>
-      <link>https://hchenfred.github.io/publication/person-re-identification/</link>
-      <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://hchenfred.github.io/publication/person-re-identification/</guid>
-      <description>&lt;p&gt;More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Mobile visual clothing search</title>
-      <link>https://hchenfred.github.io/publication/clothing-search/</link>
-      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://hchenfred.github.io/publication/clothing-search/</guid>
-      <description>&lt;p&gt;More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
 </description>
     </item>
     

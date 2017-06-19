@@ -34,11 +34,11 @@
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
 
-  <link rel="canonical" href="">
+  <link rel="canonical" href="https://hchenfred.github.io/post/lru/">
 
   
 
-  <title>404 Page not found | Huan Chen</title>
+  <title>Implement a LRU Cache | Huan Chen</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
@@ -120,78 +120,124 @@
   </div>
 </nav>
 
-<div class="container">
 
-  <h1>Page not found</h1>
-  <p>Maybe you were looking for one of these?</p>
+<article class="article" itemscope itemtype="http://schema.org/Article">
 
-  <h2>Recent Posts</h2>
-  
-  <ul>
-    <li><a href="https://hchenfred.github.io/post/tree/">Tree</a></li>
-  </ul>
-  
-  <ul>
-    <li><a href="https://hchenfred.github.io/post/binarysearch/">Binary Search</a></li>
-  </ul>
-  
-  <ul>
-    <li><a href="https://hchenfred.github.io/post/lru/">Implement a LRU Cache</a></li>
-  </ul>
-  
-  <ul>
-    <li><a href="https://hchenfred.github.io/post/clonegraph/">This is a leetcode problem 133 Clone Graph</a></li>
-  </ul>
-  
-  <ul>
-    <li><a href="https://hchenfred.github.io/post/10javascriptquestions/">Ten JavaScript Questions</a></li>
-  </ul>
-  
-  <ul>
-    <li><a href="https://hchenfred.github.io/post/throttle/">Throttle vs. Debounce</a></li>
-  </ul>
-  
-  <ul>
-    <li><a href="https://hchenfred.github.io/post/rest/">What is REST?</a></li>
-  </ul>
-  
-  <ul>
-    <li><a href="https://hchenfred.github.io/post/javascriptdom/">Javascript DOM Selector and Manipulation</a></li>
-  </ul>
-  
-  <ul>
-    <li><a href="https://hchenfred.github.io/post/executioncontext/">What is execution Context in Javascript?</a></li>
-  </ul>
-  
-  <ul>
-    <li><a href="https://hchenfred.github.io/post/functional-programming/">Functional Programming</a></li>
-  </ul>
-  
-  <ul>
-    <li><a href="https://hchenfred.github.io/post/getting-started/">Javascript Interview Questions</a></li>
-  </ul>
-  
-  <ul>
-    <li><a href="https://hchenfred.github.io/post/">Posts</a></li>
-  </ul>
   
 
-  <h2>Recent Publications</h2>
+
+  <div class="article-container">
+    <h1 itemprop="name">Implement a LRU Cache</h1>
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    <time datetime="2017-06-17 08:15:41 -0700 PDT" itemprop="datePublished">
+      Sat, Jun 17, 2017
+    </time>
+  </span>
+
   
-  <ul>
-    <li><a href="https://hchenfred.github.io/publication/">Publications</a></li>
-  </ul>
+
   
-  <ul>
-    <li><a href="https://hchenfred.github.io/publication/person-re-identification/">A Person Re-Identification System For Mobile Devices</a></li>
-  </ul>
   
-  <ul>
-    <li><a href="https://hchenfred.github.io/publication/clothing-search/">Mobile visual clothing search</a></li>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fhchenfred.github.io%2fpost%2flru%2f"
+         target="_blank">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Implement%20a%20LRU%20Cache&amp;url=https%3a%2f%2fhchenfred.github.io%2fpost%2flru%2f"
+         target="_blank">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fhchenfred.github.io%2fpost%2flru%2f&amp;title=Implement%20a%20LRU%20Cache"
+         target="_blank">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fhchenfred.github.io%2fpost%2flru%2f&amp;title=Implement%20a%20LRU%20Cache"
+         target="_blank">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Implement%20a%20LRU%20Cache&amp;body=https%3a%2f%2fhchenfred.github.io%2fpost%2flru%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
   </ul>
+</div>
+
+
   
 
 </div>
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<h2 id="lru-cache">LRU Cache</h2>
+
+<p>Design and implement a data structure for Least Recently Used (LRU) cache. It should support the following operations: get and put.</p>
+
+<p>get(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1.
+put(key, value) - Set or insert the value if the key is not already present. When the cache reached its capacity, it should invalidate the least recently used item before inserting a new item.</p>
+
+<p>Follow up:
+Could you do both operations in O(1) time complexity?</p>
+
+<ul>
+<li>How can we do get(key) in O(1)?
+We think of a hash table</li>
+<li>How can we do put(key, value) in O(1)?
+Hash table. However, we need to keep track of the least recently used item so that we can delete it when the cache reaches its capacity. How can we keep track of the least recently used item? We think of a doubly linked list that allows us to move element in constant time</li>
+</ul>
+
+    </div>
+  </div>
+
+</article>
+
+<div class="container">
+  <nav>
+  <ul class="pager">
+    
+    <li class="previous"><a href="https://hchenfred.github.io/post/clonegraph/"><span
+      aria-hidden="true">&larr;</span> This is a leetcode problem 133 Clone Graph</a></li>
+    
+
+    
+    <li class="next"><a href="https://hchenfred.github.io/post/binarysearch/">Binary Search <span
+      aria-hidden="true">&rarr;</span></a></li>
+    
+  </ul>
+</nav>
+
+</div>
+
+<div class="article-container">
+  
+
+</div>
+
 <footer class="site-footer">
   <div class="container">
     <p class="powered-by">
