@@ -11,6 +11,43 @@
     <atom:link href="/post/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>How to Hide a variable in a Javascript Function</title>
+      <link>https://hchenfred.github.io/post/hidejavascriptvariable/</link>
+      <pubDate>Wed, 21 Jun 2017 09:29:48 -0700</pubDate>
+      
+      <guid>https://hchenfred.github.io/post/hidejavascriptvariable/</guid>
+      <description>
+
+&lt;h3 id=&#34;how-to-hide-a-variable-in-a-javascript-function&#34;&gt;How to Hide a variable in a Javascript Function&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;My initial reaction was to use a IFFE to hide a variable in a Javascript function so that the variable won&amp;rsquo;t be modified.&lt;/li&gt;
+&lt;li&gt;The correct way is to use a closure. I was able to come up with the idea but it took me some time to figure out how to code it.&lt;/li&gt;
+&lt;li&gt;Also, I learned from Interviewer a great website to improve Javascript skills &lt;a href=&#34;http://superherojs.com/#language&#34; target=&#34;_blank&#34;&gt;http://superherojs.com/#language&lt;/a&gt;
+```javascript
+const Counter = function() {
+let state = 0;
+this.getState = function() {
+return state;
+}
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;this.inc = function() {
+    state++;
+    return state;
+  }
+   this.dec = function() {
+    state&amp;ndash;;
+    return state;
+  }
+}&lt;/p&gt;
+
+&lt;p&gt;```&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Tree</title>
       <link>https://hchenfred.github.io/post/tree/</link>
       <pubDate>Sun, 18 Jun 2017 10:01:47 -0700</pubDate>

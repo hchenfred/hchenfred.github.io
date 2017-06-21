@@ -11,6 +11,43 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>How to Hide a variable in a Javascript Function</title>
+      <link>https://hchenfred.github.io/post/hidejavascriptvariable/</link>
+      <pubDate>Wed, 21 Jun 2017 09:29:48 -0700</pubDate>
+      
+      <guid>https://hchenfred.github.io/post/hidejavascriptvariable/</guid>
+      <description>
+
+&lt;h3 id=&#34;how-to-hide-a-variable-in-a-javascript-function&#34;&gt;How to Hide a variable in a Javascript Function&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;My initial reaction was to use a IFFE to hide a variable in a Javascript function so that the variable won&amp;rsquo;t be modified.&lt;/li&gt;
+&lt;li&gt;The correct way is to use a closure. I was able to come up with the idea but it took me some time to figure out how to code it.&lt;/li&gt;
+&lt;li&gt;Also, I learned from Interviewer a great website to improve Javascript skills &lt;a href=&#34;http://superherojs.com/#language&#34; target=&#34;_blank&#34;&gt;http://superherojs.com/#language&lt;/a&gt;
+```javascript
+const Counter = function() {
+let state = 0;
+this.getState = function() {
+return state;
+}
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;this.inc = function() {
+    state++;
+    return state;
+  }
+   this.dec = function() {
+    state&amp;ndash;;
+    return state;
+  }
+}&lt;/p&gt;
+
+&lt;p&gt;```&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Tree</title>
       <link>https://hchenfred.github.io/post/tree/</link>
       <pubDate>Sun, 18 Jun 2017 10:01:47 -0700</pubDate>
@@ -477,16 +514,6 @@ in ES6, the keyword ‘let’ can be used to solve this problem&lt;/p&gt;
 &lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
 
 &lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Example Talk</title>
-      <link>https://hchenfred.github.io/talk/example-talk/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://hchenfred.github.io/talk/example-talk/</guid>
-      <description>&lt;p&gt;Embed your slides or video here using &lt;a href=&#34;https://gcushen.github.io/hugo-academic-demo/post/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;shortcodes&lt;/a&gt;. Further details can easily be added using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
 </description>
     </item>
     
