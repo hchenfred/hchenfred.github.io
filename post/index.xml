@@ -11,39 +11,100 @@
     <atom:link href="/post/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>How to Hide a variable in a Javascript Function</title>
-      <link>https://hchenfred.github.io/post/hidejavascriptvariable/</link>
-      <pubDate>Wed, 21 Jun 2017 09:29:48 -0700</pubDate>
+      <title>HTML Related</title>
+      <link>https://hchenfred.github.io/post/html/</link>
+      <pubDate>Sat, 22 Jul 2017 14:14:57 -0700</pubDate>
       
-      <guid>https://hchenfred.github.io/post/hidejavascriptvariable/</guid>
-      <description>
+      <guid>https://hchenfred.github.io/post/html/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;hr&gt; add a horizontal line (there&amp;rsquo;s no end tag)&lt;/li&gt;
+&lt;li&gt;&lt;br&gt; is a line break (there&amp;rsquo;s no end tag)&lt;/li&gt;
 
-&lt;h3 id=&#34;how-to-hide-a-variable-in-a-javascript-function&#34;&gt;How to Hide a variable in a Javascript Function&lt;/h3&gt;
+&lt;li&gt;&lt;p&gt;&lt;blockquote&gt; can be used for quotes&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;What&amp;rsquo;s the difference between &lt;article&gt; and &lt;section&gt;?&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;My initial reaction was to use a IFFE to hide a variable in a Javascript function so that the variable won&amp;rsquo;t be modified.&lt;/li&gt;
-&lt;li&gt;The correct way is to use a closure. I was able to come up with the idea but it took me some time to figure out how to code it.&lt;/li&gt;
-&lt;li&gt;Also, I learned from Interviewer a great website to improve Javascript skills &lt;a href=&#34;http://superherojs.com/#language&#34; target=&#34;_blank&#34;&gt;http://superherojs.com/#language&lt;/a&gt;
-```javascript
-const Counter = function() {
-let state = 0;
-this.getState = function() {
-return state;
-}
-&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;article&gt; is self-contained information. If you move &lt;article&gt; out of the whole HTML, you can still make sense of it.&lt;/li&gt;
+&lt;li&gt;&lt;section&gt; are a group of related information. However, it is not self-contained. If you move it out of the HTML, you can&amp;rsquo;t make sense of it.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Critical Rendering Path</title>
+      <link>https://hchenfred.github.io/post/renderingpath/</link>
+      <pubDate>Wed, 05 Jul 2017 12:59:18 -0700</pubDate>
+      
+      <guid>https://hchenfred.github.io/post/renderingpath/</guid>
+      <description>
 
-&lt;p&gt;this.inc = function() {
-    state++;
-    return state;
-  }
-   this.dec = function() {
-    state&amp;ndash;;
-    return state;
-  }
-}&lt;/p&gt;
+&lt;h3 id=&#34;what-is-critical-rendering-path&#34;&gt;What is Critical Rendering Path?&lt;/h3&gt;
 
-&lt;p&gt;```&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s a quick recap of the browser&amp;rsquo;s steps:
+* Process HTML markup and build the DOM tree.
+* Process CSS markup and build the CSSOM tree.
+* Combine the DOM and CSSOM into a render tree.
+* Run layout on the render tree to compute geometry of each node.
+* Paint the individual nodes to the screen.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Some CSS Stuff</title>
+      <link>https://hchenfred.github.io/post/css/</link>
+      <pubDate>Sat, 01 Jul 2017 09:31:51 -0700</pubDate>
+      
+      <guid>https://hchenfred.github.io/post/css/</guid>
+      <description>
+
+&lt;h3 id=&#34;css-styling-tips&#34;&gt;CSS Styling Tips&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;How to create a container that is properly centered?
+&lt;pre&gt;
+&lt;code class=&#34;language-css&#34;&gt;
+.container {
+width: 1140px;
+margin: 24px auto 24px auto;
+}
+&lt;/code&gt;
+&lt;/pre&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;How to add a break line above an element?
+&lt;pre&gt;
+&lt;code class=&#34;language-css&#34;&gt;
+.blog-box {
+padding-top: 20px;
+border-top: 1px solid #808080;
+}
+&lt;/code&gt;
+&lt;/pre&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Breadth First Search</title>
+      <link>https://hchenfred.github.io/post/bfs/</link>
+      <pubDate>Sat, 24 Jun 2017 10:09:09 -0700</pubDate>
+      
+      <guid>https://hchenfred.github.io/post/bfs/</guid>
+      <description>
+
+&lt;h2 id=&#34;when-we-can-use-bfs&#34;&gt;When we can use BFS?&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Shortest Path in a simple graph?
+
+&lt;ul&gt;
+&lt;li&gt;all length of edges in the graph must be equal&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Level Traverse&lt;/li&gt;
+&lt;li&gt;Connected Components&lt;/li&gt;
+&lt;li&gt;Topological Sorting&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
@@ -209,9 +270,10 @@ var cloneGraph = function(graph) {
 &lt;ul&gt;
 &lt;li&gt;In JavaScript, all functions are objects. And they all have a property called &amp;lsquo;prototype&amp;rsquo;&lt;/li&gt;
 &lt;li&gt;You can add methods to &amp;lsquo;prototype&amp;rsquo;&lt;/li&gt;
-&lt;li&gt;when you create instance objects from constructor functions, those instance object will inherit the methods from constructor&amp;rsquo;s prototype
-&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;when you create instance objects from constructor functions, those instance object will inherit the methods from constructor&amp;rsquo;s prototype&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
     </item>

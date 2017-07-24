@@ -129,14 +129,14 @@
   
   <div>
     
-    <h2><a href="https://hchenfred.github.io/post/hidejavascriptvariable/">How to Hide a variable in a Javascript Function</a></h2>
+    <h2><a href="https://hchenfred.github.io/post/html/">HTML Related</a></h2>
     
 
 <div class="article-metadata">
 
   <span class="article-date">
-    <time datetime="2017-06-21 09:29:48 -0700 PDT" itemprop="datePublished">
-      Wed, Jun 21, 2017
+    <time datetime="2017-07-22 14:14:57 -0700 PDT" itemprop="datePublished">
+      Sat, Jul 22, 2017
     </time>
   </span>
 
@@ -153,7 +153,152 @@
 
     <div class="article-style"><p>
       
-      How to Hide a variable in a Javascript Function  My initial reaction was to use a IFFE to hide a variable in a Javascript function so that the variable won&rsquo;t be modified. The correct way is to use a closure. I was able to come up with the idea but it took me some time to figure out how to code it. Also, I learned from Interviewer a great website to improve Javascript skills <a href="http://superherojs" target="_blank">http://superherojs</a>.
+      add a horizontal line (there&rsquo;s no end tag)
+is a line break (there&rsquo;s no end tag)  can be used for quotes
+ What&rsquo;s the difference between  and ?
+  is self-contained information. If you move  out of the whole HTML, you can still make sense of it.  are a group of related information. However, it is not self-contained. If you move it out of the HTML, you can&rsquo;t make sense of it.
+      
+    </p></div>
+  </div>
+  
+  <div>
+    
+    <h2><a href="https://hchenfred.github.io/post/renderingpath/">Critical Rendering Path</a></h2>
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    <time datetime="2017-07-05 12:59:18 -0700 PDT" itemprop="datePublished">
+      Wed, Jul 5, 2017
+    </time>
+  </span>
+
+  
+
+  
+  
+  
+  
+
+  
+
+</div>
+
+    <div class="article-style"><p>
+      
+      
+
+<h3 id="what-is-critical-rendering-path">What is Critical Rendering Path?</h3>
+
+<p>Here&rsquo;s a quick recap of the browser&rsquo;s steps:
+* Process HTML markup and build the DOM tree.
+* Process CSS markup and build the CSSOM tree.
+* Combine the DOM and CSSOM into a render tree.
+* Run layout on the render tree to compute geometry of each node.
+* Paint the individual nodes to the screen.</p>
+
+      
+    </p></div>
+  </div>
+  
+  <div>
+    
+    <h2><a href="https://hchenfred.github.io/post/css/">Some CSS Stuff</a></h2>
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    <time datetime="2017-07-01 09:31:51 -0700 PDT" itemprop="datePublished">
+      Sat, Jul 1, 2017
+    </time>
+  </span>
+
+  
+
+  
+  
+  
+  
+
+  
+
+</div>
+
+    <div class="article-style"><p>
+      
+      
+
+<h3 id="css-styling-tips">CSS Styling Tips</h3>
+
+<ul>
+<li><p>How to create a container that is properly centered?
+<pre>
+<code class="language-css">
+.container {
+width: 1140px;
+margin: 24px auto 24px auto;
+}
+</code>
+</pre></p></li>
+
+<li><p>How to add a break line above an element?
+<pre>
+<code class="language-css">
+.blog-box {
+padding-top: 20px;
+border-top: 1px solid #808080;
+}
+</code>
+</pre></p></li>
+</ul>
+
+      
+    </p></div>
+  </div>
+  
+  <div>
+    
+    <h2><a href="https://hchenfred.github.io/post/bfs/">Breadth First Search</a></h2>
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    <time datetime="2017-06-24 10:09:09 -0700 PDT" itemprop="datePublished">
+      Sat, Jun 24, 2017
+    </time>
+  </span>
+
+  
+
+  
+  
+  
+  
+
+  
+
+</div>
+
+    <div class="article-style"><p>
+      
+      
+
+<h2 id="when-we-can-use-bfs">When we can use BFS?</h2>
+
+<ul>
+<li>Shortest Path in a simple graph?
+
+<ul>
+<li>all length of edges in the graph must be equal</li>
+</ul></li>
+<li>Level Traverse</li>
+<li>Connected Components</li>
+<li>Topological Sorting</li>
+</ul>
+
       
     </p></div>
   </div>
@@ -346,145 +491,6 @@ get(key) - Get the value (will always be positive) of the key if the key exists 
       
       What is Throttle? Throttling enforces the maximum number of time a function can be called over time. Let&rsquo;s look at how to use throttle function in underscore.js library. This is a simple implementation of throttle function.
 var throttle = (func, waitTime) =&gt; { var wait = false; return function() { if (!wait) { func.call(); setInterval(() =&gt; { wait = true; }, waitTime); } }; }  What is Debounce? Debouncing enforces that a function not be called again until a certain amount of time has passed without it being called.
-      
-    </p></div>
-  </div>
-  
-  <div>
-    
-    <h2><a href="https://hchenfred.github.io/post/rest/">What is REST?</a></h2>
-    
-
-<div class="article-metadata">
-
-  <span class="article-date">
-    <time datetime="2017-06-06 22:21:33 -0700 PDT" itemprop="datePublished">
-      Tue, Jun 6, 2017
-    </time>
-  </span>
-
-  
-
-  
-  
-  
-  
-
-  
-
-</div>
-
-    <div class="article-style"><p>
-      
-      <p>What is REST?
-It is just a mapping between HTTP routes and CRUD(Create, Read, Update and Destroy). It is a convention.
-To illustrate how to create HTTP routes in back-end, a picture is necessary.
-<img src="/img/rest.png" alt="RESTFUL" title="RESTFUL" /></p>
-
-      
-    </p></div>
-  </div>
-  
-  <div>
-    
-    <h2><a href="https://hchenfred.github.io/post/javascriptdom/">Javascript DOM Selector and Manipulation</a></h2>
-    
-
-<div class="article-metadata">
-
-  <span class="article-date">
-    <time datetime="2017-06-05 12:05:28 -0700 PDT" itemprop="datePublished">
-      Mon, Jun 5, 2017
-    </time>
-  </span>
-
-  
-
-  
-  
-  
-  
-
-  
-
-</div>
-
-    <div class="article-style"><p>
-      
-      
-
-<h2 id="dom-selector-method">DOM Selector Method</h2>
-
-<ul>
-<li>document.getElementById()
-returns one element with the id</li>
-<li>document.getElementsByClassName()
-returns a node list (not an array)</li>
-<li>document.getElementsByTagName()
-returns a node list (not an array)</li>
-<li>document.querySelector()
-returns the first match</li>
-</ul>
-
-<h2 id="dom-manipulation">DOM Manipulation</h2>
-
-<h3 id="change-style">change style</h3>
-
-<ul>
-<li>el.style.color = &lsquo;blue&rsquo;;</li>
-<li>el.style.marginTop = &lsquo;200px&rsquo;;</li>
-</ul>
-
-<h3 id="change-css-class-to-an-element">change CSS Class to an element</h3>
-
-<ul>
-<li>el.classList.add(&lsquo;CSSclassname&rsquo;);</li>
-<li>el.classList.remove(&lsquo;CSSclassname&rsquo;);</li>
-<li>el.classList.toggle(&lsquo;CSSclassname&rsquo;);</li>
-</ul>
-
-      
-    </p></div>
-  </div>
-  
-  <div>
-    
-    <h2><a href="https://hchenfred.github.io/post/executioncontext/">What is execution Context in Javascript?</a></h2>
-    
-
-<div class="article-metadata">
-
-  <span class="article-date">
-    <time datetime="2017-06-05 09:36:53 -0700 PDT" itemprop="datePublished">
-      Mon, Jun 5, 2017
-    </time>
-  </span>
-
-  
-
-  
-  
-  
-  
-
-  
-
-</div>
-
-    <div class="article-style"><p>
-      
-      <p>Execution context is a very important concept in Javascript.
-The article is for me to try to explain it so that it deepens my understanding.</p>
-
-<ul>
-<li><p>Global Execution Context
-Global Execution Context creates a global object (window object).
-The &lsquo;this&rsquo; keyword in global execution context refers to the global object.
-Global execution context is not inside a function</p></li>
-
-<li><p>Hoisting</p></li>
-</ul>
-
       
     </p></div>
   </div>
