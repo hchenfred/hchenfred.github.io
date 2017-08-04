@@ -11,28 +11,6 @@
     <atom:link href="/post/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>HTML Related</title>
-      <link>https://hchenfred.github.io/post/html/</link>
-      <pubDate>Sat, 22 Jul 2017 14:14:57 -0700</pubDate>
-      
-      <guid>https://hchenfred.github.io/post/html/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;&lt;hr&gt; add a horizontal line (there&amp;rsquo;s no end tag)&lt;/li&gt;
-&lt;li&gt;&lt;br&gt; is a line break (there&amp;rsquo;s no end tag)&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;blockquote&gt; can be used for quotes&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;What&amp;rsquo;s the difference between &lt;article&gt; and &lt;section&gt;?&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;article&gt; is self-contained information. If you move &lt;article&gt; out of the whole HTML, you can still make sense of it.&lt;/li&gt;
-&lt;li&gt;&lt;section&gt; are a group of related information. However, it is not self-contained. If you move it out of the HTML, you can&amp;rsquo;t make sense of it.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Critical Rendering Path</title>
       <link>https://hchenfred.github.io/post/renderingpath/</link>
       <pubDate>Wed, 05 Jul 2017 12:59:18 -0700</pubDate>

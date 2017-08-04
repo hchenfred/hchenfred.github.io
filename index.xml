@@ -11,28 +11,6 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>HTML Related</title>
-      <link>https://hchenfred.github.io/post/html/</link>
-      <pubDate>Sat, 22 Jul 2017 14:14:57 -0700</pubDate>
-      
-      <guid>https://hchenfred.github.io/post/html/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;&lt;hr&gt; add a horizontal line (there&amp;rsquo;s no end tag)&lt;/li&gt;
-&lt;li&gt;&lt;br&gt; is a line break (there&amp;rsquo;s no end tag)&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;blockquote&gt; can be used for quotes&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;What&amp;rsquo;s the difference between &lt;article&gt; and &lt;section&gt;?&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;article&gt; is self-contained information. If you move &lt;article&gt; out of the whole HTML, you can still make sense of it.&lt;/li&gt;
-&lt;li&gt;&lt;section&gt; are a group of related information. However, it is not self-contained. If you move it out of the HTML, you can&amp;rsquo;t make sense of it.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Critical Rendering Path</title>
       <link>https://hchenfred.github.io/post/renderingpath/</link>
       <pubDate>Wed, 05 Jul 2017 12:59:18 -0700</pubDate>
@@ -476,6 +454,70 @@ var args = […arguments];&lt;/p&gt;
 &lt;p&gt;IIFE is immediately invoked function expression.
 the variables defined in IIFE is only accessible within IIFE, it prevents ‘var’ from polluting the global.
 in ES6, the keyword ‘let’ can be used to solve this problem&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Friend.ly</title>
+      <link>https://hchenfred.github.io/project/friendly/</link>
+      <pubDate>Sat, 03 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://hchenfred.github.io/project/friendly/</guid>
+      <description>
+
+&lt;p&gt;Friend.ly is an iOS app which allows user to create events and invite friends to events. Friends could propose new activities for an event and vote on activities.&lt;/p&gt;
+
+&lt;h2 id=&#34;tech-stack&#34;&gt;Tech Stack&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;React Native&lt;/li&gt;
+&lt;li&gt;Redux&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://reactnavigation.org/&#34; target=&#34;_blank&#34;&gt;React Navigation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Facebook iOS SDK&lt;/li&gt;
+&lt;li&gt;Webpack&lt;/li&gt;
+&lt;li&gt;Express&lt;/li&gt;
+&lt;li&gt;MySQL&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;ui&#34;&gt;UI&lt;/h2&gt;
+
+&lt;p&gt;
+&lt;figure &gt;
+    
+        &lt;img src=&#34;https://hchenfred.github.io/img/friendly1.jpeg&#34; /&gt;
+    
+    
+    &lt;figcaption&gt;
+        &lt;h4&gt;User Interface 1&lt;/h4&gt;
+        
+    &lt;/figcaption&gt;
+    
+&lt;/figure&gt;
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;https://hchenfred.github.io/img/friendly2.jpeg&#34; /&gt;
+    
+    
+    &lt;figcaption&gt;
+        &lt;h4&gt;User Interface 2&lt;/h4&gt;
+        
+    &lt;/figcaption&gt;
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;h2 id=&#34;technical-contribution&#34;&gt;Technical Contribution&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Constructed front-end with React Native to render forms for user input and to display data from states&lt;/li&gt;
+&lt;li&gt;Implemented Redux  with actions and reducers for centralized state management&lt;/li&gt;
+&lt;li&gt;Built infrastructure for user authentication with Facebook iOS SDK to retrieve and store user profile data&lt;/li&gt;
+&lt;li&gt;Designed React Navigation for ease of use when switching views between React components&lt;/li&gt;
+&lt;li&gt;Built request handlers at back-end with Express.js to populate relational tables in MySQL with Promises&lt;/li&gt;
+&lt;li&gt;Constructed tests with Jest for React Native components and Redux actions/reducers at front-end and with Mocha/Chai for request handlers and integration between Express.js and database at back-end&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
